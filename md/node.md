@@ -50,7 +50,7 @@ server.listen(port, () => {
 
 ## 路由
 
-## control
+## controller
 
 
 
