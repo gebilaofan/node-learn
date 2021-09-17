@@ -1,16 +1,21 @@
 const http = require('http');
 const path = require('path');
+const url = require('url');
+
+const {router} = require('./router');
 
 // 启动端口
 const port = 1024;
 
 // 创建服务器
 const server = http.createServer((req, res) => {
-  // 响应200 请求成功  设置响应头 charset=utf-8避免中文乱码 
-  res.writeHead(200, { 'Content-Type': 'text/plain; charset=utf-8'});
-  // res.write('hello word!')
-  res.write('来了，小老弟！')
-  res.end()
+  const pathName = url.parse(req.url).pathname;
+  // 路由处理
+  if (pathName !== '/favicon.ico' ) {
+    router(req, res, pathName);
+  };
+  // 静态资源处理
+  res.end();
 });
 
 
