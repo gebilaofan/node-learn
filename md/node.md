@@ -73,7 +73,15 @@ server.listen(port, () => {
 ## 数据库
 ### MySqy
 #### 安装使用
+```js
+// 本地安装mysql 
+具体安装步骤可以看这篇文档 https://segmentfault.com/a/1190000037533801
+cnpm i mysql2 -S
 
+
+// 更改加密方式
+
+```
 #### node中使用
 
 #### sql语法

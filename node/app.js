@@ -1,11 +1,12 @@
 const http = require('http');
 const path = require('path');
 const url = require('url');
-
+const config = require('./config.js');
+const {mysqlStart} = require('./db');
 const {router} = require('./router');
 
-// 启动端口
-const port = 1024;
+// 连接数据库
+mysqlStart()
 
 // 创建服务器
 const server = http.createServer((req, res) => {
@@ -18,9 +19,8 @@ const server = http.createServer((req, res) => {
   res.end();
 });
 
-
 // 启动服务器
-server.listen(port, () => {
-  console.log(`Server is running on http://127.0.0.1:${port}/`);
+server.listen(config.port, () => {
+  console.log(`${config.name} Server is running on http://127.0.0.1:${config.port}/`);
 })
 
