@@ -3,17 +3,19 @@ const path = require('path');
 const url = require('url');
 const config = require('./config.js');
 const {mysqlStart} = require('./db');
-const {router} = require('./router');
+const {routerHandler} = require('./router');
 
 // 连接数据库
-mysqlStart()
+// mysqlStart()
 
 // 创建服务器
 const server = http.createServer((req, res) => {
   const pathName = url.parse(req.url).pathname;
+  // 设置返回的格式 json
+  res.setHeader('Content-Type', 'application/json')
   // 路由处理
   if (pathName !== '/favicon.ico' ) {
-    router(req, res, pathName);
+    routerHandler(req, res, pathName);
   };
   // 静态资源处理
   res.end();

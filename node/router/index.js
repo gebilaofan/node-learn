@@ -7,14 +7,14 @@ routeArr['PUT']={};
 routeArr['DELETE']={};
 
 // 路由模块
-exports.router = (req, res, pathName) => {
+exports.routerHandler = (req, res, pathName) => {
   // TODO: 静态资源处理
 
   // 获取请求类型
   const method = req.method;
 
   // 路由匹配分发
-  routerHandler('GET', '/getList', contoller.getList(req, res));
+  addRouter('GET', '/getList', contoller.getList(req, res));
 
   // 判断是否为函数
   if (typeof routeArr[method][pathName] === 'function' ) {
@@ -34,18 +34,18 @@ exports.router = (req, res, pathName) => {
 
 
 /**
- * 路由处理
+ * 路由添加
  *
  * @param {*} method
  * @param {*} url
  * @param {*} handle
  */
-function routerHandler(method, url, handle) {
+function addRouter(method, url, handle) {
   try {
     console.log(`handle ${method} request -----> ${url}`)
     routeArr[method][url] = handle;
   } catch (error) {
-    console.error('routerHandler error::', error)
+    console.error('addRouter error::', error)
   };
 }
 
