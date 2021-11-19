@@ -3,7 +3,7 @@ const path = require('path');
 const url = require('url');
 const config = require('./config.js');
 const {mysqlStart} = require('./db');
-const {routerHandler} = require('./router');
+const {routerHandler} = require('./router/router');
 
 // 连接数据库
 // mysqlStart()
