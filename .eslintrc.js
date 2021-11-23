@@ -20,5 +20,6 @@ module.exports = {
     'node/prefer-global/url': ['error', 'always'],
     'node/prefer-promises/dns': 'error',
     'node/prefer-promises/fs': 'error',
+    'node/no-unpublished-require': ['off'],
   },
 };

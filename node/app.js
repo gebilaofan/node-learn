@@ -1,8 +1,8 @@
 const http = require('http');
-const path = require('path');
+// const path = require('path');
 const url = require('url');
-const config = require('./config.js');
-const { mysqlStart } = require('./db');
+const config = require('./config/config');
+// const { mysqlStart } = require('./db');
 const { routerHandler } = require('./router/router');
 
 // 连接数据库
@@ -10,6 +10,7 @@ const { routerHandler } = require('./router/router');
 
 // 创建服务器
 const server = http.createServer((req, res) => {
+  // eslint-disable-next-line node/no-deprecated-api
   const pathName = url.parse(req.url).pathname;
   // 设置返回的格式 json
   res.setHeader('Content-Type', 'application/json');
