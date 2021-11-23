@@ -48,8 +48,8 @@
 // }
 
 class Router {
-    constructor() {
-          this.routeList = [];
+  constructor() {
+    this.routeList = [];
   }
   /**
    * 路由添加
