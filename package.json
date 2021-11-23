@@ -27,8 +27,7 @@
   "lint-staged": {
     "*.{ts,js, json}": [
       "prettier --write",
-      "npx eslint ./node && npx eslint ./koa && npm eslint ./express",
-      "git add"
+      "npx eslint ./node && npx eslint ./koa && npm eslint ./express"
     ]
   }
 }
