@@ -12,24 +12,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "babel-eslint": "^10.1.0",
-    "eslint": "^7.19.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "husky": "^7.0.0",
-    "lint-staged": "^12.1.2",
-    "nodemon": "^2.0.12",
-    "prettier": "2.4.1"
-  },
-  "dependencies": {
-    "mysql2": "^2.3.0"
-  },
-  "lint-staged": {
-    "*.{ts,js,json,md}": [
-      "prettier --write",
-      "eslint --fix",
-      "git add"
-    ]
+    "nodemon": "^2.0.12"
   }
 }
