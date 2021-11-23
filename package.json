@@ -27,7 +27,7 @@
   "lint-staged": {
     "*.{ts,js, json}": [
       "prettier --write",
-      "npm run eslint",
+      "npx eslint ./node && npx eslint ./koa && npm eslint ./express",
       "git add"
     ]
   }
