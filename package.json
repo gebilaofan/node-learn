@@ -3,12 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "eslint": "eslint --fix"
+    "dev:node": "exec(npm run dev), {cwd: './node/}"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@commitlint/cli": "^15.0.0",
+    "@commitlint/config-conventional": "^15.0.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.19.0",
     "eslint-config-prettier": "^8.3.0",
@@ -19,7 +21,7 @@
     "prettier": "2.4.1"
   },
   "lint-staged": {
-    "*.{ts,js,json,md}": [
+    "*.{ts,js, json}": [
       "prettier --write",
       "eslint --fix",
       "git add"
