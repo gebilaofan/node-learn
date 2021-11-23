@@ -6,8 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
-    "dev": "nodemon app.js",
-    "prepare": "husky install"
+    "dev": "nodemon app.js"
   },
   "keywords": [],
   "author": "",
@@ -25,12 +24,6 @@
   },
   "dependencies": {
     "mysql2": "^2.3.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "eslint --fix",
-      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
-    }
   },
   "lint-staged": {
     "*.{ts,js,json,md}": [
