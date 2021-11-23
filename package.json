@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "node ./scripts/script.js"
+    "start": "node ./scripts/script.js",
+    "eslint": "npx eslint ./node && npx eslint ./koa && npm eslint ./express"
   },
   "keywords": [],
   "author": "",
@@ -26,7 +27,7 @@
   "lint-staged": {
     "*.{ts,js, json}": [
       "prettier --write",
-      "npx eslint --cache --fix",
+      "npm run eslint",
       "git add"
     ]
   }
