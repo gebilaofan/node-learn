@@ -2,8 +2,8 @@ const http = require('http');
 const path = require('path');
 const url = require('url');
 const config = require('./config.js');
-const {mysqlStart} = require('./db');
-const {routerHandler} = require('./router/router');
+const { mysqlStart } = require('./db');
+const { routerHandler } = require('./router/router');
 
 // 连接数据库
 // mysqlStart()
@@ -12,17 +12,18 @@ const {routerHandler} = require('./router/router');
 const server = http.createServer((req, res) => {
   const pathName = url.parse(req.url).pathname;
   // 设置返回的格式 json
-  res.setHeader('Content-Type', 'application/json')
+  res.setHeader('Content-Type', 'application/json');
   // 路由处理
-  if (pathName !== '/favicon.ico' ) {
+  if (pathName !== '/favicon.ico') {
     routerHandler(req, res, pathName);
-  };
+  }
   // 静态资源处理
   res.end();
 });
 
 // 启动服务器
 server.listen(config.port, () => {
-  console.log(`${config.name} Server is running on http://127.0.0.1:${config.port}/`);
-})
-
+  console.log(
+    `${config.name} Server is running on http://127.0.0.1:${config.port}/`
+  );
+});

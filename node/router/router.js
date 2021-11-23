@@ -21,7 +21,7 @@
 //     // 调用匹配到到路由处理函数
 //     routeArr[method][pathName](req, res, pathName);
 //   } else {
-//     // 匹配失败 
+//     // 匹配失败
 //     res.writeHead(200, {
 //       'Content-type': 'text/plain'
 //     });
@@ -29,9 +29,7 @@
 //     res.end();
 //   };
 
-
 // }
-
 
 // /**
 //  * 路由添加
@@ -49,11 +47,10 @@
 //   };
 // }
 
-
 class Router {
   constructor() {
-    routeList = []
-  },
+    this.routeList = [];
+  }
   /**
    * 路由添加
    *
@@ -63,10 +60,10 @@ class Router {
    */
   addRouter(method, url, handle) {
     try {
-      console.log(`handle ${method} request -----> ${url}`)
+      console.log(`handle ${method} request -----> ${url}`);
       this.routeArr[method][url] = handle;
     } catch (error) {
-      console.error('addRouter error::', error)
-    };
+      console.error('addRouter error::', error);
+    }
   }
 }
