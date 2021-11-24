@@ -4,6 +4,7 @@ const url = require('url');
 const config = require('./config/config');
 // const { mysqlStart } = require('./db');
 const { routerHandler } = require('./router/router');
+const eventEmitter = require('../scripts/event');
 
 // 连接数据库
 // mysqlStart()
@@ -27,4 +28,5 @@ server.listen(config.port, () => {
   console.log(
     `${config.name} Server is running on http://127.0.0.1:${config.port}/`
   );
+  eventEmitter.emit('eslint');
 });

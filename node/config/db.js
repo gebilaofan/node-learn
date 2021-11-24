@@ -6,7 +6,7 @@ const mySql = require('mysql2');
 const connection = mySql.createConnection(config.mySqlConfig);
 
 // 创建mysql连接
-exports.mysqlStart = () => {
+module.exports.mysqlStart = () => {
   connection.connect((error) => {
     if (error) {
       console.error('error connecting: ' + error.stack);
@@ -18,7 +18,7 @@ exports.mysqlStart = () => {
 };
 
 // 关闭mysql连接
-exports.mysqlEnd = () => {
+module.exports.mysqlEnd = () => {
   connection.end((error) => {
     console.error('mysql cloes error:', error);
   });

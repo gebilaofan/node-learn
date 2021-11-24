@@ -1,10 +1,10 @@
 {
-  "name": "todo-server",
+  "name":"todo-server",
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "node ./scripts/script.js",
-    "eslint": "npx eslint ./node && npx eslint ./koa && npm eslint ./express"
+    "start": " node ./scripts/script.js",
+    "eslint": "npx eslint --fix ./node"
   },
   "keywords": [],
   "author": "",
@@ -25,7 +25,7 @@
     "shelljs": "^0.8.4"
   },
   "lint-staged": {
-    "*.{ts,js, json}": [
+    "*.{ts,js}": [
       "prettier --write",
       "npm run eslint"
     ]
