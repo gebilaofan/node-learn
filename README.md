@@ -1,3 +1,9 @@
+# 快速启动
+```js
+  // 根目录下执行
+  yarn start
+  // 选择要启动的版本
+```
 # Node 后台开发学习
 > 一个不会Node的前端不是一个好的产品经理
 
@@ -26,6 +32,7 @@
 
 ## TODO
 - [ ] [原生Node版本(进行中...)](https://github.com/gebilaofan/todoList-nodeServer/blob/main/md/node.md)
+  - [ ] webpack引入
 - [ ] Express版本
 - [ ] Koa2版本
 - [ ] 数据库md编写
