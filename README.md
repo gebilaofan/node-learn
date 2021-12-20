@@ -29,22 +29,8 @@
 **该项目仅用于学习，不具备其他用途**，大佬们看个乐就好。如果觉得项目对你有所帮助，欢迎star。后台系列做完之后，会开一个使用`Vue3 + Electron`(没错，我就是这么菜，都1202年了还不会用Vue3)做一个桌面版的`Application`，或者是开一个小程序/app来使用，感兴趣的可以关注以下。
 
 **未经许可禁止转载💌**
-
-## 2021年11月计划
-### 项目工程
-- [ ] webpack引入
-- [x] `eslint、prettier、husky`引入
-- [x] 配置启动台
-- [ ] CI/CD
-- [ ] 工程化文档编写
-
-### code
-- [ ] 路由封装
-- [ ] 数据库连接
-
 ## TODO
 - [ ] [原生Node版本(进行中...)](https://github.com/gebilaofan/todoList-nodeServer/blob/main/md/node.md)
-  - [ ] webpack引入
   - [x] `eslint、prettier、husky`引入
   - [x] 配置启动台
 - [ ] Express版本

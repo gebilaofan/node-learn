@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": " node ./scripts/script.js",
-    "eslint": "npx eslint --fix ./node"
+    "dev": "node ./scripts/script.js",
+    "eslint": "npx eslint --fix ./node",
+    "commit": "sh commit.sh"
   },
   "keywords": [],
   "author": "",
