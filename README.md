@@ -33,6 +33,7 @@
 - [ ] [原生Node版本(进行中...)](https://github.com/gebilaofan/todoList-nodeServer/blob/main/md/node.md)
   - [x] `eslint、prettier、husky`引入
   - [x] 配置启动台
+  - [] 自动commit命令
 - [ ] Express版本
 - [ ] Koa2版本
 - [ ] 数据库md编写
